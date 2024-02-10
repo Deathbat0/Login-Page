@@ -1,6 +1,5 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
@@ -20,18 +19,7 @@ h1 {
     align-items: center;
     height: 100vh;
 }
-.form-container .info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-container .image-container{
+.form-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,43 +49,68 @@ h1 {
     margin-top: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.login-button{
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Estilos para la sección de inicio de sesión alternativo */
-.alternative-login {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.alternative-login p {
-    margin-bottom: 10px;
-}
-
-.social-login {
     display: flex;
-    justify-content: space-around;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.login-button:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+  
+.login-button:hover:after {
+    transform: translate(0, 0);
+}
+  
+.login-button:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+  
+.login-button:hover {
+    outline: 0;
 }
 
-.social-login div {
-    width: 30%;
+.form-container .social-login img{
+    height: 35px;
 }
 
-.social-login img {
-    width: 50px;
-    height: auto;
-}
 
+@media (min-width: 768px) {
+    .login-button {
+      padding: 0 40px;
+    }
+  }
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
     .form-container {
