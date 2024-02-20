@@ -1,4 +1,7 @@
 /* Estilos generales */
+html{
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +14,7 @@ h1 {
 }
 #titulo{
     font-family: 'Mea Culpa', cursive;
+    font-size: xx-large;
 }
 
 .main {
@@ -20,14 +24,16 @@ h1 {
     height: 100vh;
 }
 .form-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
-    background-color: #fff;
-    padding: 20px;
+    position: left;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .info {
@@ -36,11 +42,25 @@ h1 {
     padding-right: 20px;
 }
 
+.info a{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
 .image-container {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    width:auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
+    width: 50%;
     max-width: 100%;
     height: auto;
 }
